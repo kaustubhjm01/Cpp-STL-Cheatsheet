@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <script src="prism.js"></script>
+    <link rel="stylesheet" href="prism.css">
+    <title>CPP STL CheatSheet</title>
+</head>
+
+<body>
+    <nav>
+        <div class="center">
+            C++ <span>Standard Template Library</span> CheatSheet
+        </div>
+    </nav>
+    <section>
+        <div class="container">
+            <li class="def">The Standard Template Library (STL) is a set of C++ template classes to provide common
+                programming structures and functions such as lists, stacks, arrays, etc. It is a library of container
+                classes,
+                algorithms, and iterators.</li>
+            <div class="info">
+                <span class="bold2">1. Vector in C++ STL </span>
+                <div class="p">Vectors are same as dynamic arrays with the ability to resize itself automatically when
+                    an element is
+                    inserted or deleted, with their storage being handled automatically by the container. Vector
+                    elements
+                    are placed in contiguous storage so that they can be accessed and traversed using iterators. In
+                    vectors,data is inserted at the end.
+
+                </div>
+            </div>
+            <div class="ull">
+                <ul>
+                    <li> <span class="bold"> Declaring a vector of int type</span>
+                        <pre
+                            class="language-c++"> <code>vector</code><code><</code><code>int</code><code>> v;</code></pre>
+                    </li>
+                    <li> <span class="bold"> begin() - </span>
+                        <span> Returns an iterator pointing to the first element in the vector </span>
+                        <pre class="language-c++"> <code>v.begin()</code> </pre>
+                    </li>
+                    <li> <span class="bold"> end() - </span>
+                        <span> Returns an iterator pointing to the theoretical element that follows the last element in
+                            the vector </span>
+                        <pre class="language-c++"> <code>v.end()</code> </pre>
+                    </li>
+                    <li> <span class="bold"> size() - </span>
+                        <span> Returns the number of elements in the vector. </span>
+                        <pre class="language-c++"> <code>v.size()</code> </pre>
+                    </li>
+                    <li> <span class="bold"> front() - </span>
+                        <span> Returns a reference to the first element in the vector </span>
+                        <pre class="language-c++"> <code>v.front()</code> </pre>
+                    </li>
+                    <li> <span class="bold"> back() - </span>
+                        <span> Returns a reference to the last element in the vector </span>
+                        <pre class="language-c++"> <code>v.back()</code> </pre>
+                    </li>
+                    <li> <span class="bold"> push_back() - </span>
+                        <span> It push the elements into a vector from the back </span>
+                        <pre class="language-c++"> <code>v.push_back()</code> </pre>
+                    </li>
+                    <li> <span class="bold"> pop_back() - </span>
+                        <span> It is used to pop or remove elements from a vector from the back </span>
+                        <pre class="language-c++"> <code>v.pop_back()</code> </pre>
+                    </li>
+                    <li> <span class="bold"> erase() - </span>
+                        <span> It is used to remove elements from a container from the specified position or range.
+                        </span>
+                        <pre class="language-c++"> <code>v.erase()</code> </pre>
+                    </li>
+                    <li> <span class="bold"> clear() - </span>
+                        <span> It is used to remove all the elements of the vector container </span>
+                        <pre class="language-c++"> <code>v.clear()</code> </pre>
+                    </li>
+
+
+
+                </ul>
+            </div>
+            <hr>
+            <div class="info">
+                <span class="bold2">2. Set in C++ STL </span>
+                <div class="p">Sets are a type of associative containers in which each element has to be unique, because
+                    the value of the element identifies it. The value of the element cannot be modified once it is added
+                    to the set, though it is possible to remove and add the modified value of that element.
+                </div>
+            </div>
+            <div class="ull">
+                <ul>
+                    <li> <span class="bold"> Declaring a set of int type </span>
+                        <pre class="language-c++"> <code>set</code><code><</code><code>int</code><code>> s;</code></pre>
+                    </li>
+                    <li> <span class="bold"> begin() - </span>
+                        <span> Returns an iterator to the first element in the set. </span>
+                        <pre class="language-c++"> <code>auto it = s.begin()</code> </pre>
+                    </li>
+                    <li> <span class="bold"> end() - </span>
+                        <span> Returns an iterator to the theoretical element that follows last element in the set.
+                        </span>
+                        <pre class="language-c++"> <code>auto it = s.end()</code> </pre>
+                    </li>
+                    <li> <span class="bold"> size() - </span>
+                        <span> Returns the number of elements in the set </span>
+                        <pre class="language-c++"> <code>s.size()</code> </pre>
+                    </li>
+                    <li> <span class="bold"> empty() - </span>
+                        <span> Returns whether the set is empty. </span>
+                        <pre class="language-c++"> <code>s.empty()</code> </pre>
+                    </li>
+                    <li> <span class="bold"> insert(ele) - </span>
+                        <span> Adds a new element 'i' to the set. </span>
+                        <pre class="language-c++"> <code>s.insert(ele)</code> </pre>
+                    </li>
+                    <li> <span class="bold"> find(ele) - </span>
+                        <span> Returns an iterator to the element 'ele' in the set if found, else returns the iterator
+                            to
+                            end. </span>
+                        <pre class="language-c++"> <code>auto it = s.find(ele)</code> </pre>
+                    </li>
+                    <li> <span class="bold"> count(ele) - </span>
+                        <span> Returns 1 or 0 based on the element ‘ele’ is present in the set or not </span>
+                        <pre class="language-c++"> <code>s.count(ele)</code> </pre>
+                    </li>
+
+
+
+
+                </ul>
+            </div>
+            <hr>
+
+            <div class="info">
+                <span class="bold2">3. Map in C++ STL </span>
+                <div class="p">Maps are associative containers that store elements in a mapped fashion. Each element has
+                    a key value and a mapped value. No two mapped values can have same key values.
+                </div>
+            </div>
+            <div class="ull">
+                <ul>
+                    <li> <span class="bold"> Declaring a map of int type </span>
+                        <pre
+                            class="language-c++"> <code>map</code><code><</code><code>int,</code><code>int</code><code>> mp;</code></pre>
+                    </li>
+                    <li> <span class="bold"> begin() - </span>
+                        <span> Returns an iterator to the first element in the map. </span>
+                        <pre class="language-c++"> <code>auto it = mp.begin()</code> </pre>
+                    </li>
+                    <li> <span class="bold"> end() - </span>
+                        <span> Returns an iterator to the theoretical element that follows last element in the map.
+                        </span>
+                        <pre class="language-c++"> <code>auto it = mp.end()</code> </pre>
+                    </li>
+                    <li> <span class="bold"> size() - </span>
+                        <span> Returns the number of elements in the map </span>
+                        <pre class="language-c++"> <code>mp.size()</code> </pre>
+                    </li>
+                    <li> <span class="bold"> empty() - </span>
+                        <span> Returns whether the map is empty. </span>
+                        <pre class="language-c++"> <code>mp.empty()</code> </pre>
+                    </li>
+                    <li> <span class="bold"> clear() - </span>
+                        <span> Removes all the elements from the map. </span>
+                        <pre class="language-c++"> <code>mp.clear()</code> </pre>
+                    </li>
+                    <li> <span class="bold"> erase(ele) - </span>
+                        <span> Removes the key value ‘i’ from the map. </span>
+                        <pre class="language-c++"> <code>mp.erase(ele)</code> </pre>
+                    </li>
+                    <li> <span class="bold"> erase(iterator) - </span>
+                        <span> Removes the iterator from the map. </span>
+                        <pre class="language-c++"> <code>mp.erase(mp.begin())</code> </pre>
+                    </li>
+                    <li> <span class="bold"> insert({key,value}) - </span>
+                        <span> Insert elements with a particular key in the map container. . </span>
+                        <pre class="language-c++"> <code>mp.insert({i, i * i});</code> </pre>
+                    </li>
+
+
+
+
+
+                </ul>
+            </div>
+            <hr>
+
+            <div class="info">
+                <span class="bold2">4. Stack in C++ STL </span>
+                <div class="p">Stacks are a type of container adaptors with LIFO(Last In First Out) type of working,
+                    where a new element is added at one end and (top) an element is removed from that end only. Stack
+                    uses an encapsulated object of either vector or deque (by default) or list (sequential container
+                    class) as its underlying container, providing a specific set of member functions to access its
+                    elements.
+                </div>
+            </div>
+            <div class="ull">
+                <ul>
+                    <li> <span class="bold"> Declaring a stack of int type </span>
+                        <pre
+                            class="language-c++"> <code>stack</code><code><</code><code>int</code><code>> s;</code></pre>
+                    </li>
+
+                    <li> <span class="bold"> size() - </span>
+                        <span> Returns the size of the stack </span>
+                        <pre class="language-c++"> <code>s.size()</code> </pre>
+                    </li>
+                    <li> <span class="bold"> empty() - </span>
+                        <span> Returns whether the stack is empty. </span>
+                        <pre class="language-c++"> <code>s.empty()</code> </pre>
+                    </li>
+                    <li> <span class="bold"> top() - </span>
+                        <span> Returns a reference to the top most element of the stack </span>
+                        <pre class="language-c++"> <code>s.top()</code> </pre>
+                    </li>
+                    <li> <span class="bold"> push(ele) - </span>
+                        <span> Adds the element ‘ele’ at the top of the stack – </span>
+                        <pre class="language-c++"> <code>s.push(ele)</code> </pre>
+                    </li>
+                    <li> <span class="bold"> pop() - </span>
+                        <span> Deletes the top most element of the stack – </span>
+                        <pre class="language-c++"> <code>s.pop()</code> </pre>
+                    </li>
+                </ul>
+            </div>
+            <hr>
+
+            <div class="info">
+                <span class="bold2">5. Queue in C++ STL </span>
+                <div class="p">Queues are a type of container adaptors which operate in a first in first out (FIFO) type
+                    of arrangement. Elements are inserted at the back (end) and are deleted from the front. Queues use
+                    an encapsulated object of deque or list (sequential container class) as its underlying container,
+                    providing a specific set of member functions to access its elements.
+                </div>
+            </div>
+
+            <div class="ull">
+                <ul>
+                    <li> <span class="bold"> Declaring a queue of int type </span>
+                        <pre
+                            class="language-c++"> <code>queue</code><code><</code><code>int</code><code>> q;</code></pre>
+                    </li>
+
+                    <li> <span class="bold"> size() - </span>
+                        <span> Returns the size of the queue </span>
+                        <pre class="language-c++"> <code>q.size()</code> </pre>
+                    </li>
+                    <li> <span class="bold"> empty() - </span>
+                        <span> Returns whether the queue is empty. </span>
+                        <pre class="language-c++"> <code>q.empty()</code> </pre>
+                    </li>
+                    <li> <span class="bold"> push(ele) - </span>
+                        <span> Adds the element ‘ele’ at the end of the queue.</span>
+                        <pre class="language-c++"> <code>q.push(ele)</code> </pre>
+                    </li>
+                    <li> <span class="bold"> pop() - </span>
+                        <span> Deletes the first element of the queue. </span>
+                        <pre class="language-c++"> <code>q.pop()</code> </pre>
+                    </li>
+                    <li> <span class="bold"> front() - </span>
+                        <span> Returns a reference to the first element of the queue.</span>
+                        <pre class="language-c++"> <code>q.front()</code> </pre>
+                    </li>
+                    <li> <span class="bold"> back() - </span>
+                        <span> Returns a reference to the last element of the queue. </span>
+                        <pre class="language-c++"> <code>q.back()</code> </pre>
+                    </li>
+                </ul>
+            </div>
+            <hr>
+
+            <div class="info">
+                <span class="bold2">6. Priority Queue in C++ STL </span>
+                <div class="p">Priority queues are a type of container adapters, specifically designed such that the
+                    first element of the queue is the greatest of all elements in the queue and elements are in non
+                    increasing order (hence we can see that each element of the queue has a priority {fixed order})
+                </div>
+            </div>
+            <div class="ull">
+                <ul>
+                    <li> <span class="bold"> Declaring a priority queue of int type </span>
+                        <pre
+                            class="language-c++"> <code>priority_queue</code><code><</code><code>int</code><code>> pq;</code></pre>
+                    </li>
+
+                    <li> <span class="bold"> size() - </span>
+                        <span> Returns the size of the queue </span>
+                        <pre class="language-c++"> <code>pq.size()</code> </pre>
+                    </li>
+                    <li> <span class="bold"> empty() - </span>
+                        <span> Returns whether the queue is empty. </span>
+                        <pre class="language-c++"> <code>pq.empty()</code> </pre>
+                    </li>
+                    <li> <span class="bold"> push(ele) - </span>
+                        <span> Adds the element ‘ele’ at the end of the queue.</span>
+                        <pre class="language-c++"> <code>pq.push(ele)</code> </pre>
+                    </li>
+                    <li> <span class="bold"> pop() - </span>
+                        <span> Deletes the first element of the queue. </span>
+                        <pre class="language-c++"> <code>pq.pop()</code> </pre>
+                    </li>
+                    <li> <span class="bold"> top() - </span>
+                        <span> Returns a reference to the top most element of the queue.</span>
+                        <pre class="language-c++"> <code>pq.top()</code> </pre>
+                    </li>
+                </ul>
+            </div>
+            <hr>
+
+            <div class="info">
+                <span class="bold2">C++ STL Algorithms</span>
+                <div class="p">STL has an ocean of algorithms, Here I have mentioned Some of the most used algorithms on
+                    vectors and most useful one’s in Competitive Programming.
+                </div>
+            </div>
+            <div class="ull">
+                <ul>
+                    <li> <span class="bold"> Declaring a vector of int type</span>
+                        <pre
+                            class="language-c++"> <code>vector</code><code><</code><code>int</code><code>> v;</code></pre>
+                    </li>
+                    <li> <span class="bold"> sort(first_iterator,last_iterator) </span>
+                        <span> To sort the vector in the ascending order </span>
+                        <pre class="language-c++"> <code>sort(v.begin(),v.end())</code> </pre>
+                    </li>
+                    <li> <span class="bold"> reverse(first_iterator,last_iterator) </span>
+                        <span> Reversing the vector </span>
+                        <pre class="language-c++"> <code>reverse(v.begin(),v.end())</code> </pre>
+                    </li>
+                    <li> <span class="bold">*max_element (first_iterator, last_iterator) </span>
+                        <span> To find the maximum element of a vector</span>
+                        <pre class="language-c++"> <code>*max_element (v.begin(), v.end())</code> </pre>
+                    </li>
+                    <li> <span class="bold">*min_element (first_iterator, last_iterator) </span>
+                        <span> To find the minimum element of a vector </span>
+                        <pre class="language-c++"> <code>*min_element (v.begin(), v.end())</code> </pre>
+                    </li>
+                    <li> <span class="bold">accumulate(first_iterator, last_iterator, initial value of sum) – </span>
+                        <span> To do the summation of vector elements</span>
+                        <pre class="language-c++"> <code>accumulate(v.begin(),v.end(),0)</code> </pre>
+                    </li>,
+                    <li> <span class="bold">count(first_iterator, last_iterator,x) </span>
+                        <span>To count the occurrences of x in vector.</span>
+                        <pre class="language-c++"> <code>count(v.begin(), v.end(),5)</code> </pre>
+                    </li>
+                    <li> <span class="bold">find(first_iterator, last_iterator, x)</span>
+                        <span>Returns an iterator to the first occurence of x in vector and points to last address of
+                            vector ((name_of_vector).end()) if element is not present in vector.</span>
+                        <pre class="language-c++"> <code>find(v.begin(), v.end(), 5)</code> </pre>
+                    </li>
+
+
+
+
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Created by - Kaustubh Mhatre</p>
+    </footer>
+</body>
+
+</html>
